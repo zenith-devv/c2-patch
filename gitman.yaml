@@ -2,7 +2,8 @@ name: c2-patch
 version:
 prepare: []
 build:
-- ./setup/linux-jdk17-temurin-installer.sh
+- cd setup
+- ./linux-jdk17-temurin-installer.sh
 check: []
 install: []
 depends:
