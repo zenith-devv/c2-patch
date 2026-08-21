@@ -1,6 +1,6 @@
 #!/bin/bash
 
-required_tools=("curl" "wget" "tar" "jq") 
+required_tools=("curl" "wget" "tar" "jq")
 for tool in "${required_tools[@]}"; do
     if ! command -v "$tool" &> /dev/null; then
         echo "$tool is required but not installed. Aborting."
@@ -85,5 +85,3 @@ chmod +x "$DESKTOP_FILE"
 echo "Shortcut created at $DESKTOP_PATH"
 
 echo "Done!"
-
-python3 c2-launcher.py
